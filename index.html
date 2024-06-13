@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- PRECONNECT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+  
+  <!-- META -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" class="js-site-favicon" type="image/svg+xml" href="https://github.githubassets.com/favicons/favicon-light.svg">
+  
+  <!-- STYLE -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="simple-scrollbar.css">
+  <title>GitFavs</title>
+  
+  <!-- SCRIPTS -->
+  <script src="js/main.js" type="module" defer></script>
+  <script src="js/simple-scrollbar.min.js" defer></script>
+</head>
+<body>
+  <div id="app">
+    <header>
+      <img src="./assets/logo.svg" alt="GitFav icon">
+      <svg id="changeColor" width="187" height="33" viewBox="0 0 187 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M33.1649 18.6033C32.7221 19.031 32.5209 19.6472 32.6246 20.2516L33.2935 24.1189C33.5019 25.3228 32.5375 26.3005 31.4436 26.3005C31.1553 26.3005 30.8577 26.2323 30.5694 26.0822L27.0697 24.2562C26.7959 24.114 26.4963 24.0429 26.1956 24.0429C25.8959 24.0429 25.5962 24.114 25.3224 24.2562L21.8227 26.0822C21.5345 26.2323 21.2369 26.3005 20.9486 26.3005C19.8546 26.3005 18.8902 25.3228 19.0987 24.1189L19.7675 20.2516C19.8712 19.6472 19.67 19.031 19.2273 18.6033L16.3953 15.8648C15.2817 14.7874 15.8966 12.91 17.4354 12.6878L21.3489 12.1239C21.9607 12.036 22.4895 11.6548 22.7622 11.1047L24.5126 7.58701C24.8568 6.89472 25.5267 6.54908 26.1956 6.54908C26.8654 6.54908 27.5353 6.89472 27.8796 7.58701L29.6299 11.1047C29.9026 11.6548 30.4315 12.036 31.0433 12.1239L34.9567 12.6878C36.4956 12.91 37.1105 14.7874 35.9968 15.8648L33.1649 18.6033Z" fill="white"/>
+        </svg>
+      <div class="search">
+        <label class="sr-only" for="input-search">Digite o Github username que quer favoritar</label>
+        <input id="input-search" type="text" placeholder="Digite o Github username que quer favoritar">
+        <button id="input-search">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 1.5C12.3249 1.5 12.6128 1.70919 12.7133 2.01819L14.9824 9H22.5C22.8287 9 23.1191 9.21402 23.2164 9.52798C23.3137 9.84193 23.1952 10.1827 22.9241 10.3685L16.8295 14.5477L19.1794 21.5102C19.2837 21.8193 19.1762 22.1605 18.9134 22.354C18.6506 22.5474 18.2929 22.5488 18.0287 22.3573L12 17.9887L5.97133 22.3573C5.70709 22.5488 5.34938 22.5474 5.0866 22.354C4.82381 22.1605 4.71628 21.8193 4.82063 21.5102L7.17046 14.5477L1.07585 10.3685C0.804769 10.1827 0.686309 9.84193 0.783612 9.52798C0.880915 9.21402 1.17131 9 1.49999 9H9.01763L11.2867 2.01819C11.3871 1.70919 11.6751 1.5 12 1.5ZM12 4.67651L10.2758 9.98181C10.1753 10.2908 9.88739 10.5 9.56249 10.5H3.91994L8.48664 13.6315C8.76343 13.8213 8.88044 14.1718 8.77311 14.4898L6.99287 19.7646L11.5599 16.4552C11.8225 16.2649 12.1775 16.2649 12.4401 16.4552L17.0071 19.7646L15.2269 14.4898C15.1196 14.1718 15.2366 13.8213 15.5133 13.6315L20.08 10.5H14.4375C14.1126 10.5 13.8246 10.2908 13.7242 9.98181L12 4.67651Z" fill="white"/>
+            </svg>            
+          FAVORITAR
+        </button>
+      </div>
+    </header>
+    <table  id="tableState" class="emptyState">
+      <thead>
+        <tr>
+          <th>Usuário</th>
+          <th>Repositórios</th>
+          <th>Followers</th>
+          <th>Ação</th>
+          </tr>
+      </thead>
+      <tbody>
+        <p id="emptyStateText">Nenhum favorito ainda</p>
+      </tbody>
+      <tfoot></tfoot>
+    </table>
+  </div>
+</body>
+</html>
